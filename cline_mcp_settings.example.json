@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "api-request-server": {
+      "autoApprove": [
+        "send_api_request"
+      ],
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "path/to/your/api-request-server/build/index.js"
+      ],
+      "env": {
+        "HTTP_PROXY": "http://127.0.0.1:8080",
+        "HTTPS_PROXY": "http://127.0.0.1:8080",
+        "NO_PROXY": "localhost,127.0.0.1,.local"
+      }
+    }
+  }
+}
