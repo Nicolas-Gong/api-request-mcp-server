@@ -1,0 +1,12 @@
+src/
+node_modules/
+.env
+.git
+.gitignore
+*.md
+tsconfig.json
+package-lock.json
+.claude/
+.mcp.json
+cline_mcp_settings.example.json
+claude_mcp_settings.example.json

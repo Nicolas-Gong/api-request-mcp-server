@@ -1,14 +1,47 @@
 {
   "name": "api-request-server",
-  "version": "0.1.0",
-  "description": "MCP服务器用于自动请求API接口并验证JSON响应",
+  "version": "1.0.0",
+  "description": "API 请求 MCP 服务器 - 自动发送 HTTP 请求并验证 JSON 响应",
+  "main": "build/index.js",
+  "bin": "build/index.js",
   "type": "module",
+  "files": [
+    "build",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "start": "node build/index.js"
+    "watch": "tsc --watch",
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/api-request-server"
+  },
+  "keywords": [
+    "api",
+    "http",
+    "request",
+    "mcp",
+    "claude",
+    "cline",
+    "proxy",
+    "json",
+    "model-context-protocol"
+  ],
+  "author": "Your Name <your-email@example.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@modelcontextprotocol/sdk": "^0.5.0",
     "axios": "^1.6.0"
   },
   "devDependencies": {
@@ -16,3 +49,4 @@
     "@types/node": "^20.0.0"
   }
 }
+
