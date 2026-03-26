@@ -9,7 +9,7 @@
       "type": "stdio",
       "command": "node",
       "args": [
-        "path/to/your/api-request-server/build/index.js"
+        "C:\\path\\to\\api-request-server\\build\\index.js"
       ],
       "env": {
         "HTTP_PROXY": "http://127.0.0.1:8080",
